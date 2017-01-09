@@ -8,10 +8,17 @@ public class ArraySorter {
         int[] sortedArray;
 
         // Tri bulle
-        System.out.println("---- Bubble Sort ----");
+        /*System.out.println("---- Bubble Sort ----");
         displayArray(toSortArray);
         sortedArray = bubbleSort(toSortArray);
+        displayArray(sortedArray);*/
+
+        // Tri sélection
+        System.out.println("---- Selection Sort ----");
+        displayArray(toSortArray);
+        sortedArray = selectionSort(toSortArray);
         displayArray(sortedArray);
+
     }
 
     /**
@@ -32,6 +39,27 @@ public class ArraySorter {
                     int temp = array[i];
                     array[i] = array[i+1];
                     array[i+1] = temp;
+                }
+            }
+        }
+
+        return array;
+    }
+
+    /**
+     * Tri un tableau d'entier en ordre croissant via l'algo Selection.
+     *
+     * @param array
+     *            Tableau à trier.
+     * @return Tableau trié.
+     */
+    static int[] selectionSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
                 }
             }
         }
