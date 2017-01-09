@@ -14,9 +14,15 @@ public class ArraySorter {
         displayArray(sortedArray);*/
 
         // Tri sélection
-        System.out.println("---- Selection Sort ----");
+        /*System.out.println("---- Selection Sort ----");
         displayArray(toSortArray);
         sortedArray = selectionSort(toSortArray);
+        displayArray(sortedArray);*/
+
+        // Tri insertion
+        System.out.println("---- Insertion Sort ----");
+        displayArray(toSortArray);
+        sortedArray = insertionSort(toSortArray);
         displayArray(sortedArray);
 
     }
@@ -62,6 +68,29 @@ public class ArraySorter {
                     array[j] = temp;
                 }
             }
+        }
+
+        return array;
+    }
+
+    /**
+     * Tri un tableau d'entier en ordre croissant l'algo Insertion.
+     *
+     * @param array
+     *            Tableau à trier.
+     * @return Tableau trié.
+     */
+    static int[] insertionSort(int[] array) {
+        for (int i = 1; i < array.length; i++) {
+            int newValue = array[i];
+            int j = i;
+
+            while (j > 0 && array[j-1] > newValue) {
+                array[j] = array[j-1];
+                j--;
+            }
+
+            array[j] = newValue;
         }
 
         return array;
