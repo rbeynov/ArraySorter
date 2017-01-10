@@ -6,27 +6,29 @@ public class ArraySorter {
 
     public static void main(String[] args) {
         // Initialisation de 2 tableaux d'entier
-        int[] toSortArray = { 43, 80, 81, 49, 83, 20, 97, 82, 43, 40 };
+        int[] toSortArray;
         int[] sortedArray;
 
         // Tri bulle
-        /*System.out.println("---- Bubble Sort ----");
+        System.out.println("---- Bubble Sort ----");
+        toSortArray = createRandomIntArray(10, 100);
         displayArray(toSortArray);
         sortedArray = bubbleSort(toSortArray);
-        displayArray(sortedArray);*/
+        displayArray(sortedArray);
 
         // Tri sélection
-        /*System.out.println("---- Selection Sort ----");
+        System.out.println("---- Selection Sort ----");
+        toSortArray = createRandomIntArray(10, 100);
         displayArray(toSortArray);
         sortedArray = selectionSort(toSortArray);
-        displayArray(sortedArray);*/
+        displayArray(sortedArray);
 
         // Tri insertion
         System.out.println("---- Insertion Sort ----");
+        toSortArray = createRandomIntArray(10, 100);
         displayArray(toSortArray);
         sortedArray = insertionSort(toSortArray);
         displayArray(sortedArray);
-
     }
 
     /**
