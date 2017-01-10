@@ -1,5 +1,7 @@
 package com.ynov.arraysorter;
 
+import java.util.Random;
+
 public class ArraySorter {
 
     public static void main(String[] args) {
@@ -94,6 +96,26 @@ public class ArraySorter {
         }
 
         return array;
+    }
+
+    /**
+     *  Créer un tableau d'une taille donnée contenant un ensemble de valeur aléatoire comprise entre 0 et la valeur maximum donnée.
+     * @param size
+     *            Taille du tableau à créer.
+     * @param maxValue
+     *            Valeur maximale contenue dans le tableau.
+     * @return Tableau de nombres aléatoires.
+     */
+    static int[] createRandomIntArray(int size, int maxValue) {
+        int[] randomValueArray = new int[size];
+
+        // Génération des nombres aléatoires et placement dans le tableau
+        for (int i = 0; i < size; i++) {
+            Random randomGenerator = new Random();
+            randomValueArray[i] = randomGenerator.nextInt(maxValue+1);
+        }
+
+        return randomValueArray;
     }
 
     /**
